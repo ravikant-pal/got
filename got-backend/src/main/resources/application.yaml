@@ -1,0 +1,21 @@
+spring:
+  # ===============================
+  # ===== Datasource config =======
+  # ===============================
+  datasource:
+    url: jdbc:postgresql://localhost/westeros_db?characterEncoding=UTF-8&autoreconnect=true
+    driver-class-name: org.postgresql.Driver
+    username: app_user
+    password: app_password
+  # ===============================
+  # ========= JPA config ==========
+  # ===============================
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    #    show-sql: true
+    hibernate:
+      ddl-auto: update #create-drop
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 5
